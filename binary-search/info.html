@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Step-by-Step Tutorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #120d1f; /* Text color */
+        }
+
+        .container h2 {
+            font-weight: bold;
+            font-size: 24px;
+            color: #000;
+        }
+
+        .container p {
+            font-family: 'Times New Roman', serif;
+            font-size: 18px;
+            color: #010873;
+        }
+
+        .step {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .step hr {
+            height: 1px; /* Adjust the height of the hr line */
+            background-color: #ddd; /* Change the color if desired */
+            border: none;
+            margin: 10px 0;
+        }
+
+        .step img {
+            max-width: 300px;
+            margin: 0 auto 10px; /* Center the image and add spacing at the bottom */
+            display: block; /* Ensure the image is centered */
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+
+        /* Style for the centered bullet points */
+        .step li {
+            font-family: 'Times New Roman', serif;
+            font-size: 18px;
+            color: #010873;
+            text-align: center; /* Center-align the bullet points */
+            list-style-position: inside; /* Position the bullet points inside the <li> element */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #010873;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-container button:hover {
+            background-color: #000;
+        }
+
+        button 
+        {
+            padding: 10px 20px;
+            background-color: #010873;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+    button:hover 
+        {
+            background-color: #000;
+        }
+        /* Add this CSS to style the navigation menu */
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list li:not(:last-child) a::after {
+    content: " | ";
+    margin-right: 5px;
+    color: #010873; /* Color for the "|" separator */
+    font-weight: normal; /* Optional: Reset font weight if needed */
+}
+
+.step nav {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.step nav .nav-list {
+  list-style: none;
+}
+
+.step nav .nav-list li {
+  display: inline-block;
+}
+
+.step nav .nav-list li a {
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.step nav .nav-list li a:hover {
+  background-color: #ccc;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer {
+  text-align: center;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Ensure full viewport height */
+        }
+
+        /* Style for the container holding the elements */
+        .container {
+            text-align: center; /* Center text within the container */
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        /* Style for the inputs and message */
+        input[type="number"],
+        input[type="submit"] {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Ensure full viewport height */
+        }
+
+        /* Style for the container holding the elements */
+        .container {
+            text-align: center; /* Center text within the container */
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        /* Style for the text input */
+        input[type="number"] {
+            padding: 10px;
+            border: 2px solid #010873; /* Border color */
+            border-radius: 5px;
+            width: 100%; /* Make the input box full width within the container */
+            margin-bottom: 10px;
+        }
+
+        /* Style for the submit button */
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #010873; /* Button background color */
+            color: #fff; /* Button text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #000; /* Button background color on hover */
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="step">
+            <h1>Binary Search...</h1>
+            <nav role="navigation" class="step">
+              <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">More Information on Binary Search</a></li>
+            <li><a href="abtme.html">About Me</a></li>
+            <li><a href="demo.html">Try Me!</a></li>
+              </ul>
+            </nav>
+            <hr>
+          </div>
+          <div class="step" id="step1">
+            <h2>This will be the starting position of the Array</h2>
+             <p>
+                 Let x = 4 be the element to be searched.
+             </p>
+             <img src="J:\8th grade coding stuff ig\binary sort\1.png" alt="Step 1">
+             <button onclick="nextStep(2)">Next</button>
+         </div>
+ 
+         <div class="step" id="step2" style="display: none;">
+             <h2>Step 1: Mark Low and High Points</h2>
+             <p>
+             Set two pointers low and high at the lowest and the highest positions respectively.
+             </p>
+             <img src="J:\8th grade coding stuff ig\binary sort\2.png" alt="Step 2">
+             <button onclick="prevStep(1)">Back</button>
+             <button onclick="nextStep(3)">Next</button>
+         </div>
+ 
+         <div class="step" id="step3" style="display: none;">
+             <h2>Step 2: Find the Middle</h2>
+             <p>Find the middle element (mid) of the array ie. arr[(low + high)/2] = 6.</p>
+             <img src="J:\8th grade coding stuff ig\binary sort\3.png" alt="Step 2">
+             <button onclick="prevStep(2)">Back</button>
+             <button onclick="nextStep(4)">Next</button>
+         </div>
+ 
+         <div class="step" id="step4" style="display: none;">
+             <h2>Step 3: Compare</h2>
+             <p>If x == mid, then return mid.Else, compare the element to be searched with m.</p>
+             <button onclick="prevStep(3)">Back</button>
+             <button onclick="nextStep(5)">Next</button>
+         </div>
+ 
+         <div class="step" id="step5" style="display: none;">
+             <h2>Step 4: Calculations</h2>
+             <li>If x > mid, compare x with the middle element of the elements on the right side of mid. This is done by setting low to low = mid + 1.</li>
+             <li>Else, compare x with the middle element of the elements on the left side of mid. This is done by setting high to high = mid - 1.</li>
+             <button onclick="prevStep(4)">Back</button>
+             <button onclick="nextStep(6)">Next</button>
+         </div>
+ 
+         <div class="step" id="step6" style="display: none;">
+             <h2>Step 5: Repeat</h2>
+             <p>Repeat steps 3 to 6 until low meets high.</p>
+             <img src="J:\8th grade coding stuff ig\binary sort\4.png">
+             <button onclick="prevStep(5)">Back</button>
+             <button onclick="nextStep(7)">Next</button>
+         </div>
+ 
+         <div class="step" id="step7" style="display: none;">
+             <h2>Step 6: Solution</h2>
+             <p>x = 4 is found.</p>
+             <img src="J:\8th grade coding stuff ig\binary sort\6.png">
+             <button onclick="prevStep(6)">Back</button>
+         </div>
+        
+    </div>
+
+    <script>
+    let currentStep = 1;
+
+function nextStep(step) {
+    // Hide the current step
+    document.getElementById(`step${currentStep}`).style.display = 'none';
+
+    // Show the next step
+    document.getElementById(`step${step}`).style.display = 'block';
+
+    currentStep = step;
+}
+
+function prevStep(step) {
+    // Hide the current step
+    document.getElementById(`step${currentStep}`).style.display = 'none';
+
+    // Show the previous step
+    document.getElementById(`step${step}`).style.display = 'block';
+
+    currentStep = step;
+}
+
+// Function to show the guessing game section
+function showGuessSection() {
+    // Hide the current step (if any)
+    if (currentStep > 0) {
+        document.getElementById(`step${currentStep}`).style.display = 'none';
+    }
+
+    // Show the guessing game section
+    document.getElementById('guessSection').style.display = 'block';
+}
+    </script>
+
+
+<footer>
+    <p>© yes 2023</p>
+  </footer>
+</body>
+</html>

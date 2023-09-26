@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>yes</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #120d1f; /* Text color */
+        }
+
+        .container h2 {
+            font-weight: bold;
+            font-size: 24px;
+            color: #000;
+        }
+
+        .container p {
+            font-family: 'Times New Roman', serif;
+            font-size: 18px;
+            color: #010873;
+        }
+
+        .step {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .step hr {
+            height: 1px; /* Adjust the height of the hr line */
+            background-color: #ddd; /* Change the color if desired */
+            border: none;
+            margin: 10px 0;
+        }
+
+        .step img {
+            max-width: 300px;
+            margin: 0 auto 10px; /* Center the image and add spacing at the bottom */
+            display: block; /* Ensure the image is centered */
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+
+        /* Style for the centered bullet points */
+        .step li {
+            font-family: 'Times New Roman', serif;
+            font-size: 18px;
+            color: #010873;
+            text-align: center; /* Center-align the bullet points */
+            list-style-position: inside; /* Position the bullet points inside the <li> element */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #010873;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-container button:hover {
+            background-color: #000;
+        }
+
+        button 
+        {
+            padding: 10px 20px;
+            background-color: #010873;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+    button:hover 
+        {
+            background-color: #000;
+        }
+        /* Add this CSS to style the navigation menu */
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list li:not(:last-child) a::after {
+    content: " | ";
+    margin-right: 5px;
+    color: #010873; /* Color for the "|" separator */
+    font-weight: normal; /* Optional: Reset font weight if needed */
+}
+
+.step nav {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.step nav .nav-list {
+  list-style: none;
+}
+
+.step nav .nav-list li {
+  display: inline-block;
+}
+
+.step nav .nav-list li a {
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.step nav .nav-list li a:hover {
+  background-color: #ccc;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer {
+  text-align: center;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Ensure full viewport height */
+        }
+
+        /* Style for the container holding the elements */
+        .container {
+            text-align: center; /* Center text within the container */
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        /* Style for the inputs and message */
+        input[type="number"],
+        input[type="submit"] {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Ensure full viewport height */
+        }
+
+        /* Style for the container holding the elements */
+        .container {
+            text-align: center; /* Center text within the container */
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        /* Style for the text input */
+        input[type="number"] {
+            padding: 10px;
+            border: 2px solid #010873; /* Border color */
+            border-radius: 5px;
+            width: 100%; /* Make the input box full width within the container */
+            margin-bottom: 10px;
+        }
+
+        /* Style for the submit button */
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #010873; /* Button background color */
+            color: #fff; /* Button text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #000; /* Button background color on hover */
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+        /* Style for the navigation menu */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    margin-right: 10px; /* Add space between menu items */
+}
+
+ul li a {
+    text-decoration: none;
+    color: #010873;
+    padding: 5px 10px; /* Add padding to make the links more clickable */
+    border: 2px solid #010873;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+    background-color: #010873;
+    color: #fff; /* Change text color on hover */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Hello World..</h1>
+    <h3>this is the hub of yes sites, click the project you want to go to:</h3>
+    <ul>
+        <li><a href="irate/index.html">Go to What Is Computer Science?</a></li>
+        <li><a href="insertion-sort/insertion_sort.html">Go to Insertion Sort</a></li>
+        <li><a href="binary-search/index.html">Go to Binary Search</a></li>
+    </ul>
+    </div>
+</body>
+</html>

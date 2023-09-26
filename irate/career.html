@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {
+   background-color: lightgray;
+   font-family: Arial, sans-serif;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.nav {
+  background-color: #444;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+
+.grid-item {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Additional style for fun facts */
+.fun-fact-grid-item {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #dcdcdc;
+}
+/* Additional style for career opportunities section */
+.career-opportunities {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.career-opportunities h2 {
+  color: #fff;
+}
+
+.career-opportunities p {
+  margin: 10px 0;
+}
+
+/* Additional style for button animation */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: #2980b9;
+}
+
+/* Match the button color with your website's color scheme */
+.button {
+  background-color: #444; /* Update to match your color scheme */
+}
+
+.button:hover {
+  background-color: #333; /* Update to match your color scheme */
+}
+
+/* Style for adjusting button position */
+.button-down {
+  margin-top: 10px; /* Adjust the value to move the button lower */
+}
+
+/* Style for button container using flexbox */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>Code.yes - Programming Career Opportunities</h1>
+  </div>
+  
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="tutorial.html">Tutorials</a>
+    <a href="branches.html">Branches</a>
+    <a href="career.html">Jobs</a>
+    <a href="history.html">History</a>
+    <a href="about-me.html">About Me</a>
+  </div>
+  
+  <!-- Career Opportunities Content -->
+  <div class="career-opportunities">
+    <h2>Career Opportunities in Programming/Coding</h2>
+    <p>Are you passionate about coding and solving complex problems? A career in programming offers a world of opportunities across various industries. With the increasing demand for skilled developers, here are some potential roles:</p>
+    
+    <ul>
+        <li>
+            <strong>Consider Your Lifestyle Preferences:</strong>
+            <ul>
+                <li>When choosing a career path, consider how you want to spend your days, weeks, and years working and living.</li>
+                <li>Think about whether you prefer a structured corporate environment or the flexibility of freelancing.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <strong>Corporate Environment:</strong>
+            <ul>
+                <li>Front-end Developer / Back-end Developer roles.</li>
+                <li>Working for large corporations like Google, Netflix, etc.</li>
+                <li>Involves precise role specialization.</li>
+                <li>Regular work hours, meetings, HR processes.</li>
+                <li>Potential for career progression within the company.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <strong>Freelancing:</strong>
+            <ul>
+                <li>Work as a freelancer with varied projects.</li>
+                <li>Flexibility to choose types of work (UI/UX, full-stack development, WordPress, etc.).</li>
+                <li>Set your own schedule, take days off as needed.</li>
+                <li>Requires self-motivation and self-discipline.</li>
+                <li>You're responsible for finding clients and contracts.</li>
+                <li>Diverse skills and the ability to communicate effectively are important.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <strong>Choosing Based on Lifestyle:</strong>
+            <ul>
+                <li>Your career choice should align with how you want to spend your days and what makes you feel comfortable.</li>
+                <li>Consider factors like structure, flexibility, responsibility, and communication.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <strong>Happiness in Your Career:</strong>
+            <ul>
+                <li>Choose a career you genuinely enjoy.</li>
+                <li>Even high-paying jobs can become miserable if you're not passionate about them.</li>
+                <li>The example of an individual who shifted from a high-paying executive role to delivering newspapers to pursue happiness.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <strong>Researching Day-to-Day Life:</strong>
+            <ul>
+                <li>Understand the day-to-day realities of the profession you're considering.</li>
+                <li>Explore factors like work hours, communication requirements, responsibility levels, and potential stressors.</li>
+                <li>Ensuring that the daily aspects of the job align with your preferences is crucial for long-term satisfaction.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <strong>Developing Skills Patiently:</strong>
+            <ul>
+                <li>If you genuinely enjoy your chosen career, work diligently to develop your skills.</li>
+                <li>Patiently acquiring expertise can lead to a fulfilling and successful career.</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <!-- Add more job roles and descriptions here -->
+    
+    <p>These roles are just the tip of the iceberg. From web development and data science to machine learning and cybersecurity, the programming field offers a diverse range of exciting career paths.</p>
+  </div>
+
+  <div class="button-container">
+    <a href="howtogetjob.html" class="button button-down">Explaining Further on how to decide your Coding Career</a>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2023 Code.yes. All rights reserved.</p>
+  </div>
+</div>
+<div class="container">
+  <div id="particles-container"></div>
+</body>
+</html>

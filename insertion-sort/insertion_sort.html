@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Introduction to Insertion Sort</title>
+    <style>
+      /* Reset some default styles */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      /* Global styles */
+      body {
+          font-family: "Poppins", Arial, sans-serif;
+          background: linear-gradient(90deg, #000, #000066, #000);
+          background-size: 400% 100%;
+          color: #fff;
+          animation: gradientAnimation 10s linear infinite; /* Adjust the duration as needed */
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+      }
+
+      /* Header styles */
+      header {
+          background: linear-gradient(45deg, #000066, #000, #000);
+          background-size: 400% 100%;
+          color: #fff;
+          text-align: center;
+          padding: 20px 0;
+          border-radius: 10px 10px 0 0; /* Rounded top corners */
+      }
+
+      h1 {
+          font-size: 28px;
+          margin-bottom: 10px;
+      }
+
+      /* Main content styles */
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+          flex: 1; /* Grow to fill available space */
+      }
+
+      h2 {
+          font-size: 24px;
+          margin-top: 20px;
+      }
+
+      p {
+          font-size: 18px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+      }
+
+      /* About Me section */
+      .about-me {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          color: #333;
+      }
+
+      /* Footer styles */
+      footer {
+          background: linear-gradient(45deg, #000066, #000, #000066 );
+          background-size: 400% 100%;
+          color: #fff;
+          text-align: center;
+          padding: 20px 0;
+          border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+          margin-top: auto;
+          
+      }
+
+      footer a {
+          color: #fff;
+          text-decoration: none;
+          margin: 0 10px;
+          
+      }
+
+      /* Animation for looping gradient */
+      @keyframes gradientAnimation {
+          0% {
+              background-position: 0 0;
+          }
+          50% {
+              background-position: 100% 0;
+          }
+          100% {
+              background-position: 0 0;
+          }
+      }
+      
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Insertion Sort Example</h1>
+    </header>
+
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+        <h1>Hello World</h1>
+        <h2>What is Insertion Sort?</h2>
+        <p>Insertion Sort is a straightforward sorting algorithm used to arrange elements in a list or array. It works by repeatedly comparing each element with the previous ones and shifting them to their correct positions if they are in the wrong order. This process continues for all elements, resulting in a sorted list.</p>
+        <h2>What is The Purpose of Insertion Sort?</h2>
+        <p>
+            Insertion Sort is a straightforward sorting algorithm primarily used to organize a list of items, such as numbers or data, into ascending or descending order. It accomplishes this by iteratively inserting each unsorted element into its correct position within the sorted portion of the list, gradually expanding the sorted section until the entire list is ordered. The primary advantages of Insertion Sort are its simplicity and suitability for small lists or nearly sorted data, making it a valuable educational tool and sometimes a practical choice in specific scenarios. However, for significantly large datasets, more efficient algorithms like Quick Sort or Merge Sort are typically preferred due to their faster performance. The selection of a sorting algorithm depends on the specific problem's requirements and the scale of the data being sorted.</p>
+        <h4>You can try the Insertion Sort Algorithm right now!</h4>
+        <p>Try Me!</p>
+        <input type="text" id="inputNumbers" style="font-family: 'Courier New'; padding: 10px; margin-bottom: 10px;">
+        <button style="font-family: 'Courier New'; padding: 0; height: 38px; width: auto; background-color: #fff; color: #333; border: 1px solid #333; cursor: pointer; border-radius: 0 5px 5px 0;" onclick="sortNumbers()">Sort</button>
+        <p id="sortedResult"></p>
+    </div>
+    
+
+    <script>
+        // Function to perform insertion sort
+        function bubbleSort(arr) {
+            var n = arr.length;
+            for (var i = 0; i < n - 1; i++) {
+                for (var j = 0; j < n - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        // Swap elements
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
+        // Function to handle sorting when the button is clicked
+        function sortNumbers() {
+            var inputField = document.getElementById("inputNumbers");
+            var sortedResult = document.getElementById("sortedResult");
+            var inputValues = inputField.value.split(",").map(Number);
+
+            // Call bubbleSort function to sort the array
+            bubbleSort(inputValues);
+
+            // Display the sorted array
+            sortedResult.innerHTML = "Sorted Array: " + inputValues.join(", ");
+        }
+    </script>
+    <footer>
+        <p>Navigation:</p>
+        <a href="insertion_sort.html">Home</a>
+        <a href="moreon_insertionsort.html">More on Insertion Sort</a>
+        <a href="about_me.html">About Me</a>
+  </footer>
+</body>
+</html>
+
+
+
+        

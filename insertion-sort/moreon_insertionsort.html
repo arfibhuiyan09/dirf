@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>More on Insertion Sort</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background: linear-gradient(90deg, #000, #000066, #000);
+            background-size: 400% 100%;
+            color: #fff;
+            animation: gradientAnimation 10s linear infinite;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(45deg, #000066, #000, #000);
+            background-size: 400% 100%;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 10px 10px 0 0;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        /* Main content styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Footer styles */
+        footer {
+            background: linear-gradient(45deg, #000066, #000, #000066);
+            background-size: 400% 100%;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 0 0 10px 10px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Animation for looping gradient */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 100% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>More on Insertion Sort</h1>
+    </header>
+
+    <div class="container">
+        <h2>Introduction to Insertion Sort</h2>
+        <p>
+            Insertion Sort is a simple sorting algorithm used to organize elements in a list or array. It works by repeatedly comparing each element with the previous ones and shifting them to their correct positions if they are in the wrong order. This process continues for all elements, resulting in a sorted list.
+        </p>
+
+        <h2>Real-Life Applications</h2>
+        <p>
+            Insertion Sort may not be the most efficient sorting algorithm for large datasets, but it has practical applications in real life. For example, it can be used in:
+        </p>
+        <ul>
+            <li>Sorting small lists or arrays where simplicity is more important than speed.</li>
+            <li>As a building block for more complex sorting algorithms.</li>
+            <li>Sorting playing cards in a hand during a card game.</li>
+        </ul>
+
+        <h2>How to Use Insertion Sort</h2>
+        <p>
+            Using Insertion Sort is straightforward. Here's a step-by-step guide:
+        </p>
+        <ol>
+            <li>Start with the second element in the list.</li>
+            <li>Compare it to the elements before it and insert it into the correct position within the sorted portion of the list.</li>
+            <li>Repeat this process for all elements until the entire list is sorted.</li>
+        </ol>
+
+        <h2>Insertion Sort Algorithm in Python</h2>
+        <p>
+            Below is the Python code for the Insertion Sort algorithm, which is used to sort a list of numbers in ascending order.
+        </p>
+    
+        <pre><code>
+    def insertion_sort(arr):
+        for i in range(1, len(arr)):
+            key = arr[i]
+            j = i - 1
+            while j >= 0 and key < arr[j]:
+                arr[j + 1] = arr[j]
+                j -= 1
+            arr[j + 1] = key
+    
+    # Example usage:
+    numbers = [17, 3, 9, 6, 25, 11, 8, 14, 5, 19, 2]
+    insertion_sort(numbers)
+    print("Sorted Numbers:", numbers)
+            </code></pre>
+    
+        <p>
+            In this code, the <code>insertion_sort</code> function takes a list (<code>arr</code>) as input and sorts it using the Insertion Sort algorithm. You can replace the <code>numbers</code> list with your own list of numbers to sort.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+            Insertion Sort is a valuable algorithm to learn, both for its simplicity and its practical applications in specific scenarios. While it may not be the fastest sorting algorithm, understanding its principles can help you grasp more complex sorting techniques and their use cases.
+        </p>
+    </div>
+
+
+    
+
+    <footer>
+        <p>Navigation:</p>
+        <a href="insertion_sort.html">Home</a>
+        <a href="moreon_insertionsort.html">More on Insertion Sort</a>
+        <a href="about_me.html">About Me</a>
+    </footer>
+</body>
+
+</html>
