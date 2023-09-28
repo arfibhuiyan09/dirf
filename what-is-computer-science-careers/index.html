@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Careers</title>
+    <style>
+        /* Embedded CSS styles */
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Apply basic styles to the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body stretches to at least the viewport height */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav li {
+            margin: 0 10px;
+            transition: transform 0.3s ease; /* Example transition */
+        }
+
+        nav li:hover {
+            transform: scale(1.1); /* Example hover effect */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            flex-grow: 1; /* Allow content to grow and push the footer down */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Grid layout for careers */
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .career-item {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: none; /* Initially hide career descriptions */
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .career-item.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Button animation */
+        }
+
+        button:hover {
+            background-color: #555; /* Change background color on hover */
+            transform: scale(1.05); /* Scale the button on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Computer Science Careers</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-me.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>Computer Science Career Paths</h2>
+        <div class="career-grid career-grid-1">
+            <div class="career-item">
+                <h3>Software Developer:</h3>
+                <p>Design and create applications, software, and systems to solve real-world problems.</p>
+            </div>
+            <div class="career-item">
+                <h3>Data Scientist:</h3>
+                <p>Analyze and interpret data to extract valuable insights and make data-driven decisions.</p>
+            </div>
+            <div class="career-item">
+                <h3>Web Developer:</h3>
+                <p>Build and maintain websites and web applications for businesses and individuals.</p>
+            </div>
+            <div class="career-item">
+                <h3>DevOps Engineer:</h3>
+                <p>Streamline software development and deployment processes through automation and collaboration.</p>
+            </div>
+            <!-- Add more career items as needed -->
+        </div>
+        <button onclick="toggleCareerInfo('career-grid-1')">Show Career Info</button>
+    </div>
+
+    <div class="content">
+        <h2>Additional Information</h2>
+        <div class="career-grid career-grid-2">
+            <div class="career-item">
+                <h3>Network Engineer</h3>
+                <p>Manage and maintain computer networks to ensure efficient data communication.</p>
+            </div>
+            <div class="career-item">
+                <h3>Cybersecurity Analyst</h3>
+                <p>Protect organizations from cyber threats by implementing security measures and monitoring for breaches.</p>
+            </div>
+            <!-- Add more career items as needed -->
+        </div>
+        <button onclick="toggleCareerInfo('career-grid-2')">Show Career Info</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Computer Science Careers</p>
+    </footer>
+
+    <script>
+        function toggleCareerInfo(gridId) {
+            const careerGrid = document.querySelector(`.${gridId}`);
+            const careerItems = careerGrid.querySelectorAll('.career-item');
+            careerItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.toggle('show');
+                }, index * 1000); // Delay each item's animation (1 second per item)
+            });
+        }
+    </script>
+</body>
+</html>
