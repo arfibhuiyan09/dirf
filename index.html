@@ -253,7 +253,25 @@ ul li a:hover {
     background-color: #010873;
     color: #fff; /* Change text color on hover */
 }
+/* Background container */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow interaction with content behind */
+    z-index: -1; /* Place behind other content */
+}
 
+/* Individual particle style */
+.particle {
+    position: absolute;
+    background-color: #010873;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
     </style>
 </head>
 <body>
@@ -269,5 +287,77 @@ ul li a:hover {
         <li><a href="what-is-computer-science-careers/index.html">Go to What Are Computer Science Careers?</a></li>
     </ul>
     </div>
+    <div class="particles-container"></div>
+    <script>
+
+    // Number of particles
+    const numParticles = 100;
+    
+    // Initialize particles
+    for (let i = 0; i < numParticles; i++) {
+        createParticle();
+    }
+    
+    // Function to create a single particle
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        document.querySelector('.particles-container').appendChild(particle);
+    
+        // Initial position
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        particle.style.left = posX + 'px';
+        particle.style.top = posY + 'px';
+    
+        // Animation
+        const speed = 1 + Math.random() * 3; // Adjust particle speed
+        const angle = Math.random() * 360;
+        const vx = Math.cos(angle) * speed;
+        const vy = Math.sin(angle) * speed;
+    
+        function update() {
+            posX += vx;
+            posY += vy;
+    
+            if (posX < 0 || posX > window.innerWidth || posY < 0 || posY > window.innerHeight) {
+                // Reset if particle goes off screen
+                posX = Math.random() * window.innerWidth;
+                posY = Math.random() * window.innerHeight;
+            }
+    
+            particle.style.left = posX + 'px';
+            particle.style.top = posY + 'px';
+            requestAnimationFrame(update);
+        }
+    
+        update();
+    }
+    
+    // Interaction with cursor
+    document.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+    
+        const particles = document.querySelectorAll('.particle');
+        particles.forEach((particle) => {
+            const particleX = parseInt(particle.style.left);
+            const particleY = parseInt(particle.style.top);
+    
+            const deltaX = mouseX - particleX;
+            const deltaY = mouseY - particleY;
+            const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    
+            if (distance < 100) {
+                // Move particles away from cursor
+                const angle = Math.atan2(deltaY, deltaX);
+                const newX = particleX + Math.cos(angle) * 20;
+                const newY = particleY + Math.sin(angle) * 20;
+                particle.style.left = newX + 'px';
+                particle.style.top = newY + 'px';
+            }
+        });
+    });
+    </script>
 </body>
 </html>
