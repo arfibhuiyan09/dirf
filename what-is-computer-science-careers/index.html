@@ -22,17 +22,6 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh; /* Ensure the body stretches to at least the viewport height */
-            animation: spin 4s linear; /* Example animation */
-            transform-origin: center;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(-360deg);
-            }
         }
 
         header {
@@ -120,6 +109,14 @@
             background-color: #555; /* Change background color on hover */
             transform: scale(1.05); /* Scale the button on hover */
         }
+        @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
     </style>
 </head>
 <body>
@@ -177,6 +174,8 @@
 
     <footer>
         <p>&copy; 2023 Computer Science Careers</p>
+        <button id="spinButton">Spin Page</button>
+
     </footer>
 
     <script>
@@ -189,6 +188,38 @@
                 }, index * 1000); // Delay each item's animation (1 second per item)
             });
         }
+    </script>
+    <script>
+        let spinning = false; // Variable to track the spinning state
+    
+        function toggleCareerInfo(gridId) {
+            const careerGrid = document.querySelector(`.${gridId}`);
+            const careerItems = careerGrid.querySelectorAll('.career-item');
+            careerItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.toggle('show');
+                }, index * 1000); // Delay each item's animation (1 second per item)
+            });
+        }
+    
+        const spinButton = document.getElementById('spinButton');
+    
+        spinButton.addEventListener('click', () => {
+            if (spinning) {
+                // If already spinning, stop the spinning and reset the button text
+                document.body.style.animation = '';
+                spinning = false;
+                spinButton.textContent = 'Spin Page';
+            } else {
+                // If not spinning, start the spinning and show a confirmation dialog
+                const confirmSpin = confirm('yes or no');
+                if (confirmSpin) {
+                    document.body.style.animation = 'spin 0.1s infinite linear'; // Add the spinning animation
+                    spinning = true;
+                    spinButton.textContent = 'Stop Spinning';
+                }
+            }
+        });
     </script>
 </body>
 </html>
