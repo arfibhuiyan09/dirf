@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count-Down App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #0073e6;
+            font-size: 32px;
+            margin: 0;
+        }
+        p {
+            font-size: 20px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        input[type="number"] {
+            width: 60px;
+        }
+        button {
+            background-color: #0073e6;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0058a8;
+        }
+        #countDownResult {
+            font-size: 36px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Count-Down App</h1>
+    <p>Enter hours, minutes, and seconds to count down:</p>
+    <input type="number" id="hours" placeholder="Hours">
+    <input type="number" id="minutes" placeholder="Minutes">
+    <input type="number" id="seconds" placeholder="Seconds">
+    <button id="startButton">Start Countdown</button>
+    <button onclick="stopCountDown()">Stop Countdown</button>
+    <p id="countDownResult"></p>
+
+    <script>
+        let countdownInterval;
+        let remainingTime;
+
+        // Function to start the countdown
+        function startCountDown() {
+            const hoursInput = parseInt(document.getElementById("hours").value) || 0;
+            const minutesInput = parseInt(document.getElementById("minutes").value) || 0;
+            const secondsInput = parseInt(document.getElementById("seconds").value) || 0;
+
+            const totalTimeInSeconds = (hoursInput * 3600) + (minutesInput * 60) + secondsInput;
+
+            if (!isNaN(totalTimeInSeconds) && totalTimeInSeconds > 0) {
+                remainingTime = totalTimeInSeconds;
+                countdownInterval = setInterval(updateCountdown, 1000);
+                updateCountdown();
+            } else {
+                document.getElementById("countDownResult").textContent = "Please enter a valid time duration.";
+            }
+        }
+
+        // Function to update the countdown
+        function updateCountdown() {
+            if (remainingTime <= 0) {
+                document.getElementById("countDownResult").textContent = "BOOM!";
+                stopCountDown();
+            } else {
+                const hours = Math.floor(remainingTime / 3600);
+                const minutes = Math.floor((remainingTime % 3600) / 60);
+                const seconds = remainingTime % 60;
+                document.getElementById("countDownResult").textContent = `${hours}h ${minutes}m ${seconds}s`;
+                remainingTime--;
+            }
+        }
+
+        // Function to stop the countdown
+        function stopCountDown() {
+            clearInterval(countdownInterval);
+        }
+
+        // Event listener for the "Start Countdown" button
+        document.getElementById("startButton").addEventListener("click", startCountDown);
+
+        // Event listener for space key press
+        document.addEventListener("keydown", function(event) {
+            if (event.key === " ") {
+                startCountDown();
+            }
+        });
+    </script>
+</body>
+</html>
